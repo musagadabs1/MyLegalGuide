@@ -32,6 +32,18 @@ namespace MyLegalGuide
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
+
+                //Change Password Options
+                
+            });
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 6;
+                //options.Password.RequiredUniqueChars = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>

@@ -19,7 +19,7 @@ namespace MyLegalGuide.Models
         public DateTime StatuteOfLimitation { get; set; }
 
         public Client Client { get; set; }
-        public Staff Staff { get; set; }
+        public virtual ICollection<Staff> Staffs { get; set; }
     }
     public enum PracticeArea
     {

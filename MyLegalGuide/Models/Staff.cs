@@ -13,5 +13,7 @@ namespace MyLegalGuide.Models
         public string LastName { get; set; }
         public string UserType { get; set; }
         public int BillingRate { get; set; }
+
+        public virtual ICollection<Case> Cases { get; set; }
     }
 }
