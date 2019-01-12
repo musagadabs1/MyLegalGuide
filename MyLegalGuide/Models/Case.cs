@@ -17,6 +17,9 @@ namespace MyLegalGuide.Models
         public Stage CaseStage { get; set; }
         public string Description { get; set; }
         public DateTime StatuteOfLimitation { get; set; }
+
+        public Client Client { get; set; }
+        public Staff Staff { get; set; }
     }
     public enum PracticeArea
     {
